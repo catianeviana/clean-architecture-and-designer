@@ -16,6 +16,9 @@ let db =[
     {'3':{Name:'Cliente 3', Idade:'20'}},
     {'4':{Name:'Cliente 4', Idade:'20'}},
 ]
+app.get('/', (req, res)=>{
+    return res.json(db)
+})
 
 app.listen(21262, () => {
     console.log('Express started at http://localhost:21262')
